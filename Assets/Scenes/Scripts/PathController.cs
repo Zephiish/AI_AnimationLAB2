@@ -75,7 +75,15 @@ public class PathController : MonoBehaviour
     {
         // switch to next target
         target = pathManager.GetNextTarget();
+
+        if (other.CompareTag("Wall"))
+        {
+            animator.SetBool("isWalking", false);
+            isWalking = false;
+        }
     }
+
+    
 
 
 }
